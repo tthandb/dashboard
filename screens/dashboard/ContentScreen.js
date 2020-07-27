@@ -11,7 +11,7 @@ const AccountItem = (props) => (
     ]}
   >
     <Text style={styles.titleAccountNumber}>{props.title}</Text>
-    <Text style={styles.totalAccountNumber}>{props.total}</Text>
+    <Text style={styles.totalAccountNumber}>${props.total}.00</Text>
   </View>
 );
 const CategoryItem = (props) => (
@@ -42,7 +42,7 @@ const CategoryItem = (props) => (
           { color: props.textColor, textAlign: "right" },
         ]}
       >
-        {props.cost}
+        ${props.cost}
       </Text>
     </View>
   </TouchableOpacity>
@@ -71,7 +71,7 @@ const ListOfAccount = () => (
     </View>
     <View style={styles.totalBalanceWrapper}>
       <Text style={styles.totalCostText}>
-        {DATA.account_information["total"]}
+        ${DATA.account_information["total"]}.00
       </Text>
       <Text style={[styles.titleCategory, { color: "#A6B1C0" }]}>
         Total Balance
@@ -105,7 +105,7 @@ const ContentScreen = (props) => {
             description="Credit card"
             id="1"
             time="Today"
-            cost="250"
+            cost="250.00"
             source={require("../../assets/icons/groceries.png")}
             backgroundColor="#FEC180"
             textColor="#FF958F"
@@ -116,7 +116,7 @@ const ContentScreen = (props) => {
             id="2"
             description="Credit card"
             time="03/04/2018"
-            cost="250"
+            cost="250.00"
             source={require("../../assets/icons/clothes.png")}
             backgroundColor="#EFBAD3"
             textColor="#A254F2"
@@ -127,7 +127,7 @@ const ContentScreen = (props) => {
             id="3"
             description="Cash"
             time="01/03/2018"
-            cost="250"
+            cost="250.00"
             source={require("../../assets/icons/rental.png")}
             backgroundColor="#54BAE6"
             textColor="#51EFDE"

@@ -20,8 +20,8 @@ const DetailScreen = (props) => {
   const [data, setData] = useState([]);
   useEffect(() => {
     let tempData = [];
-    detail.map((e, i) => {
-      if (e.category === +categoryId) tempData.push(e);
+    detail.map((element) => {
+      if (element.category === +categoryId) tempData.push(element);
     });
     setData(tempData);
   }, []);
